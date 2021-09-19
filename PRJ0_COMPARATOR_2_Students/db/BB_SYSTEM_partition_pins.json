@@ -1,0 +1,85 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "BB_SYSTEM_greaterthan_Out",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_lessthan_Out",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_equal_Out",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_dataA_InBUS[7]",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_dataB_InBUS[7]",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_dataA_InBUS[6]",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_dataB_InBUS[6]",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_dataA_InBUS[5]",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_dataB_InBUS[5]",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_dataA_InBUS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_dataB_InBUS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_dataA_InBUS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_dataB_InBUS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_dataA_InBUS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_dataB_InBUS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_dataA_InBUS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_dataB_InBUS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_dataA_InBUS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_dataB_InBUS[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

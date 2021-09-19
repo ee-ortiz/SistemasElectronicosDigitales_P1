@@ -1,0 +1,99 @@
+# Reading Z:/Program Files (x86)/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do BB_SYSTEM_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying Z:/Program Files (x86)/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+Z:/PRJ0_COMPARATOR_2_Students/rtl {Z:/PRJ0_COMPARATOR_2_Students/rtl/CC_LESSTHAN.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:20 on Sep 19,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/PRJ0_COMPARATOR_2_Students/rtl" Z:/PRJ0_COMPARATOR_2_Students/rtl/CC_LESSTHAN.v 
+# -- Compiling module CC_LESSTHAN
+# 
+# Top level modules:
+# 	CC_LESSTHAN
+# End time: 17:43:20 on Sep 19,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/PRJ0_COMPARATOR_2_Students/rtl {Z:/PRJ0_COMPARATOR_2_Students/rtl/CC_GREATERTHAN.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:20 on Sep 19,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/PRJ0_COMPARATOR_2_Students/rtl" Z:/PRJ0_COMPARATOR_2_Students/rtl/CC_GREATERTHAN.v 
+# -- Compiling module CC_GREATERTHAN
+# 
+# Top level modules:
+# 	CC_GREATERTHAN
+# End time: 17:43:20 on Sep 19,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/PRJ0_COMPARATOR_2_Students/rtl {Z:/PRJ0_COMPARATOR_2_Students/rtl/CC_EQUAL.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:20 on Sep 19,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/PRJ0_COMPARATOR_2_Students/rtl" Z:/PRJ0_COMPARATOR_2_Students/rtl/CC_EQUAL.v 
+# -- Compiling module CC_EQUAL
+# 
+# Top level modules:
+# 	CC_EQUAL
+# End time: 17:43:20 on Sep 19,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/PRJ0_COMPARATOR_2_Students/rtl {Z:/PRJ0_COMPARATOR_2_Students/rtl/CC_COMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:20 on Sep 19,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/PRJ0_COMPARATOR_2_Students/rtl" Z:/PRJ0_COMPARATOR_2_Students/rtl/CC_COMPARATOR.v 
+# -- Compiling module CC_COMPARATOR
+# 
+# Top level modules:
+# 	CC_COMPARATOR
+# End time: 17:43:21 on Sep 19,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/PRJ0_COMPARATOR_2_Students {Z:/PRJ0_COMPARATOR_2_Students/BB_SYSTEM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:21 on Sep 19,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/PRJ0_COMPARATOR_2_Students" Z:/PRJ0_COMPARATOR_2_Students/BB_SYSTEM.v 
+# -- Compiling module BB_SYSTEM
+# 
+# Top level modules:
+# 	BB_SYSTEM
+# End time: 17:43:21 on Sep 19,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+Z:/PRJ0_COMPARATOR_2_Students/simulation/modelsim {Z:/PRJ0_COMPARATOR_2_Students/simulation/modelsim/TB_SYSTEM.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:21 on Sep 19,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/PRJ0_COMPARATOR_2_Students/simulation/modelsim" Z:/PRJ0_COMPARATOR_2_Students/simulation/modelsim/TB_SYSTEM.vt 
+# -- Compiling module TB_SYSTEM
+# 
+# Top level modules:
+# 	TB_SYSTEM
+# End time: 17:43:21 on Sep 19,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  TB_SYSTEM
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" TB_SYSTEM 
+# Start time: 17:43:21 on Sep 19,2021
+# Loading work.TB_SYSTEM
+# Loading work.BB_SYSTEM
+# Loading work.CC_COMPARATOR
+# Loading work.CC_GREATERTHAN
+# Loading work.CC_LESSTHAN
+# Loading work.CC_EQUAL
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Running testbench
+# 0:Tiempo: 10000.TB_SYSTEM_dataA_InBUS = 10011011  |  TB_SYSTEM_dataB_InBUS= 156  |  TB_SYSTEM_equal_Out = 1
+# 0:Tiempo: 30000.TB_SYSTEM_dataA_InBUS = 00000000  |  TB_SYSTEM_dataB_InBUS=   0  |  TB_SYSTEM_equal_Out = 0
+# 0:Tiempo: 50000.TB_SYSTEM_dataA_InBUS = 11111111  |  TB_SYSTEM_dataB_InBUS= 254  |  TB_SYSTEM_equal_Out = 1
+# 0:Tiempo: 70000.TB_SYSTEM_dataA_InBUS = 00000001  |  TB_SYSTEM_dataB_InBUS= 156  |  TB_SYSTEM_equal_Out = 1
+# 0:Tiempo: 90000.TB_SYSTEM_dataA_InBUS = 01111011  |  TB_SYSTEM_dataB_InBUS= 123  |  TB_SYSTEM_equal_Out = 0
+# 0:Tiempo: 110000.TB_SYSTEM_dataA_InBUS = 11111111  |  TB_SYSTEM_dataB_InBUS=   0  |  TB_SYSTEM_equal_Out = 1
+# End time: 17:45:35 on Sep 19,2021, Elapsed time: 0:02:14
+# Errors: 0, Warnings: 0

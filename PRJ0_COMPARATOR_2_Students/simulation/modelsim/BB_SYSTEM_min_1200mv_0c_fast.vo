@@ -1,0 +1,592 @@
+// Copyright (C) 2019  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition"
+
+// DATE "09/19/2021 17:50:34"
+
+// 
+// Device: Altera EP4CE22F17C6 Package FBGA256
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module BB_SYSTEM (
+	BB_SYSTEM_greaterthan_Out,
+	BB_SYSTEM_lessthan_Out,
+	BB_SYSTEM_equal_Out,
+	BB_SYSTEM_dataA_InBUS,
+	BB_SYSTEM_dataB_InBUS);
+output 	BB_SYSTEM_greaterthan_Out;
+output 	BB_SYSTEM_lessthan_Out;
+output 	BB_SYSTEM_equal_Out;
+input 	[7:0] BB_SYSTEM_dataA_InBUS;
+input 	[7:0] BB_SYSTEM_dataB_InBUS;
+
+// Design Ports Information
+// BB_SYSTEM_greaterthan_Out	=>  Location: PIN_K1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BB_SYSTEM_lessthan_Out	=>  Location: PIN_K2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BB_SYSTEM_equal_Out	=>  Location: PIN_P15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BB_SYSTEM_dataA_InBUS[7]	=>  Location: PIN_T14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BB_SYSTEM_dataB_InBUS[7]	=>  Location: PIN_L16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BB_SYSTEM_dataA_InBUS[6]	=>  Location: PIN_N14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BB_SYSTEM_dataB_InBUS[6]	=>  Location: PIN_J16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BB_SYSTEM_dataA_InBUS[5]	=>  Location: PIN_L14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BB_SYSTEM_dataB_InBUS[5]	=>  Location: PIN_T15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BB_SYSTEM_dataA_InBUS[4]	=>  Location: PIN_N15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BB_SYSTEM_dataB_InBUS[4]	=>  Location: PIN_J15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BB_SYSTEM_dataA_InBUS[3]	=>  Location: PIN_N12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BB_SYSTEM_dataB_InBUS[3]	=>  Location: PIN_N16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BB_SYSTEM_dataA_InBUS[2]	=>  Location: PIN_L15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BB_SYSTEM_dataB_InBUS[2]	=>  Location: PIN_K15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BB_SYSTEM_dataA_InBUS[1]	=>  Location: PIN_L13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BB_SYSTEM_dataB_InBUS[1]	=>  Location: PIN_P16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BB_SYSTEM_dataA_InBUS[0]	=>  Location: PIN_J14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BB_SYSTEM_dataB_InBUS[0]	=>  Location: PIN_M16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("BB_SYSTEM_min_1200mv_0c_v_fast.sdo");
+// synopsys translate_on
+
+wire \BB_SYSTEM_greaterthan_Out~output_o ;
+wire \BB_SYSTEM_lessthan_Out~output_o ;
+wire \BB_SYSTEM_equal_Out~output_o ;
+wire \BB_SYSTEM_dataB_InBUS[7]~input_o ;
+wire \BB_SYSTEM_dataA_InBUS[7]~input_o ;
+wire \BB_SYSTEM_dataB_InBUS[6]~input_o ;
+wire \BB_SYSTEM_dataA_InBUS[6]~input_o ;
+wire \BB_SYSTEM_dataA_InBUS[5]~input_o ;
+wire \BB_SYSTEM_dataB_InBUS[5]~input_o ;
+wire \BB_SYSTEM_dataB_InBUS[4]~input_o ;
+wire \BB_SYSTEM_dataA_InBUS[4]~input_o ;
+wire \BB_SYSTEM_dataA_InBUS[3]~input_o ;
+wire \BB_SYSTEM_dataB_InBUS[3]~input_o ;
+wire \BB_SYSTEM_dataA_InBUS[2]~input_o ;
+wire \BB_SYSTEM_dataB_InBUS[2]~input_o ;
+wire \BB_SYSTEM_dataB_InBUS[1]~input_o ;
+wire \BB_SYSTEM_dataA_InBUS[1]~input_o ;
+wire \BB_SYSTEM_dataA_InBUS[0]~input_o ;
+wire \BB_SYSTEM_dataB_InBUS[0]~input_o ;
+wire \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~1_cout ;
+wire \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~3_cout ;
+wire \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~5_cout ;
+wire \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~7_cout ;
+wire \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~9_cout ;
+wire \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~11_cout ;
+wire \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~13_cout ;
+wire \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~14_combout ;
+wire \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~1_combout ;
+wire \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~2_combout ;
+wire \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~0_combout ;
+wire \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~3_combout ;
+wire \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~4_combout ;
+
+
+hard_block auto_generated_inst(
+	.devpor(devpor),
+	.devclrn(devclrn),
+	.devoe(devoe));
+
+// Location: IOOBUF_X0_Y12_N9
+cycloneive_io_obuf \BB_SYSTEM_greaterthan_Out~output (
+	.i(\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~14_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\BB_SYSTEM_greaterthan_Out~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \BB_SYSTEM_greaterthan_Out~output .bus_hold = "false";
+defparam \BB_SYSTEM_greaterthan_Out~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y12_N2
+cycloneive_io_obuf \BB_SYSTEM_lessthan_Out~output (
+	.i(!\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~14_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\BB_SYSTEM_lessthan_Out~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \BB_SYSTEM_lessthan_Out~output .bus_hold = "false";
+defparam \BB_SYSTEM_lessthan_Out~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X53_Y6_N16
+cycloneive_io_obuf \BB_SYSTEM_equal_Out~output (
+	.i(!\CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~4_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\BB_SYSTEM_equal_Out~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \BB_SYSTEM_equal_Out~output .bus_hold = "false";
+defparam \BB_SYSTEM_equal_Out~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X53_Y11_N8
+cycloneive_io_ibuf \BB_SYSTEM_dataB_InBUS[7]~input (
+	.i(BB_SYSTEM_dataB_InBUS[7]),
+	.ibar(gnd),
+	.o(\BB_SYSTEM_dataB_InBUS[7]~input_o ));
+// synopsys translate_off
+defparam \BB_SYSTEM_dataB_InBUS[7]~input .bus_hold = "false";
+defparam \BB_SYSTEM_dataB_InBUS[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X45_Y0_N22
+cycloneive_io_ibuf \BB_SYSTEM_dataA_InBUS[7]~input (
+	.i(BB_SYSTEM_dataA_InBUS[7]),
+	.ibar(gnd),
+	.o(\BB_SYSTEM_dataA_InBUS[7]~input_o ));
+// synopsys translate_off
+defparam \BB_SYSTEM_dataA_InBUS[7]~input .bus_hold = "false";
+defparam \BB_SYSTEM_dataA_InBUS[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X53_Y14_N8
+cycloneive_io_ibuf \BB_SYSTEM_dataB_InBUS[6]~input (
+	.i(BB_SYSTEM_dataB_InBUS[6]),
+	.ibar(gnd),
+	.o(\BB_SYSTEM_dataB_InBUS[6]~input_o ));
+// synopsys translate_off
+defparam \BB_SYSTEM_dataB_InBUS[6]~input .bus_hold = "false";
+defparam \BB_SYSTEM_dataB_InBUS[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X53_Y6_N22
+cycloneive_io_ibuf \BB_SYSTEM_dataA_InBUS[6]~input (
+	.i(BB_SYSTEM_dataA_InBUS[6]),
+	.ibar(gnd),
+	.o(\BB_SYSTEM_dataA_InBUS[6]~input_o ));
+// synopsys translate_off
+defparam \BB_SYSTEM_dataA_InBUS[6]~input .bus_hold = "false";
+defparam \BB_SYSTEM_dataA_InBUS[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X53_Y9_N8
+cycloneive_io_ibuf \BB_SYSTEM_dataA_InBUS[5]~input (
+	.i(BB_SYSTEM_dataA_InBUS[5]),
+	.ibar(gnd),
+	.o(\BB_SYSTEM_dataA_InBUS[5]~input_o ));
+// synopsys translate_off
+defparam \BB_SYSTEM_dataA_InBUS[5]~input .bus_hold = "false";
+defparam \BB_SYSTEM_dataA_InBUS[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X45_Y0_N15
+cycloneive_io_ibuf \BB_SYSTEM_dataB_InBUS[5]~input (
+	.i(BB_SYSTEM_dataB_InBUS[5]),
+	.ibar(gnd),
+	.o(\BB_SYSTEM_dataB_InBUS[5]~input_o ));
+// synopsys translate_off
+defparam \BB_SYSTEM_dataB_InBUS[5]~input .bus_hold = "false";
+defparam \BB_SYSTEM_dataB_InBUS[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X53_Y14_N1
+cycloneive_io_ibuf \BB_SYSTEM_dataB_InBUS[4]~input (
+	.i(BB_SYSTEM_dataB_InBUS[4]),
+	.ibar(gnd),
+	.o(\BB_SYSTEM_dataB_InBUS[4]~input_o ));
+// synopsys translate_off
+defparam \BB_SYSTEM_dataB_InBUS[4]~input .bus_hold = "false";
+defparam \BB_SYSTEM_dataB_InBUS[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X53_Y9_N15
+cycloneive_io_ibuf \BB_SYSTEM_dataA_InBUS[4]~input (
+	.i(BB_SYSTEM_dataA_InBUS[4]),
+	.ibar(gnd),
+	.o(\BB_SYSTEM_dataA_InBUS[4]~input_o ));
+// synopsys translate_off
+defparam \BB_SYSTEM_dataA_InBUS[4]~input .bus_hold = "false";
+defparam \BB_SYSTEM_dataA_InBUS[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X47_Y0_N22
+cycloneive_io_ibuf \BB_SYSTEM_dataA_InBUS[3]~input (
+	.i(BB_SYSTEM_dataA_InBUS[3]),
+	.ibar(gnd),
+	.o(\BB_SYSTEM_dataA_InBUS[3]~input_o ));
+// synopsys translate_off
+defparam \BB_SYSTEM_dataA_InBUS[3]~input .bus_hold = "false";
+defparam \BB_SYSTEM_dataA_InBUS[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X53_Y9_N22
+cycloneive_io_ibuf \BB_SYSTEM_dataB_InBUS[3]~input (
+	.i(BB_SYSTEM_dataB_InBUS[3]),
+	.ibar(gnd),
+	.o(\BB_SYSTEM_dataB_InBUS[3]~input_o ));
+// synopsys translate_off
+defparam \BB_SYSTEM_dataB_InBUS[3]~input .bus_hold = "false";
+defparam \BB_SYSTEM_dataB_InBUS[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X53_Y11_N1
+cycloneive_io_ibuf \BB_SYSTEM_dataA_InBUS[2]~input (
+	.i(BB_SYSTEM_dataA_InBUS[2]),
+	.ibar(gnd),
+	.o(\BB_SYSTEM_dataA_InBUS[2]~input_o ));
+// synopsys translate_off
+defparam \BB_SYSTEM_dataA_InBUS[2]~input .bus_hold = "false";
+defparam \BB_SYSTEM_dataA_InBUS[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X53_Y13_N8
+cycloneive_io_ibuf \BB_SYSTEM_dataB_InBUS[2]~input (
+	.i(BB_SYSTEM_dataB_InBUS[2]),
+	.ibar(gnd),
+	.o(\BB_SYSTEM_dataB_InBUS[2]~input_o ));
+// synopsys translate_off
+defparam \BB_SYSTEM_dataB_InBUS[2]~input .bus_hold = "false";
+defparam \BB_SYSTEM_dataB_InBUS[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X53_Y7_N8
+cycloneive_io_ibuf \BB_SYSTEM_dataB_InBUS[1]~input (
+	.i(BB_SYSTEM_dataB_InBUS[1]),
+	.ibar(gnd),
+	.o(\BB_SYSTEM_dataB_InBUS[1]~input_o ));
+// synopsys translate_off
+defparam \BB_SYSTEM_dataB_InBUS[1]~input .bus_hold = "false";
+defparam \BB_SYSTEM_dataB_InBUS[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X53_Y10_N15
+cycloneive_io_ibuf \BB_SYSTEM_dataA_InBUS[1]~input (
+	.i(BB_SYSTEM_dataA_InBUS[1]),
+	.ibar(gnd),
+	.o(\BB_SYSTEM_dataA_InBUS[1]~input_o ));
+// synopsys translate_off
+defparam \BB_SYSTEM_dataA_InBUS[1]~input .bus_hold = "false";
+defparam \BB_SYSTEM_dataA_InBUS[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X53_Y15_N8
+cycloneive_io_ibuf \BB_SYSTEM_dataA_InBUS[0]~input (
+	.i(BB_SYSTEM_dataA_InBUS[0]),
+	.ibar(gnd),
+	.o(\BB_SYSTEM_dataA_InBUS[0]~input_o ));
+// synopsys translate_off
+defparam \BB_SYSTEM_dataA_InBUS[0]~input .bus_hold = "false";
+defparam \BB_SYSTEM_dataA_InBUS[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X53_Y17_N22
+cycloneive_io_ibuf \BB_SYSTEM_dataB_InBUS[0]~input (
+	.i(BB_SYSTEM_dataB_InBUS[0]),
+	.ibar(gnd),
+	.o(\BB_SYSTEM_dataB_InBUS[0]~input_o ));
+// synopsys translate_off
+defparam \BB_SYSTEM_dataB_InBUS[0]~input .bus_hold = "false";
+defparam \BB_SYSTEM_dataB_InBUS[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X47_Y10_N12
+cycloneive_lcell_comb \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~1 (
+// Equation(s):
+// \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~1_cout  = CARRY((!\BB_SYSTEM_dataA_InBUS[0]~input_o  & \BB_SYSTEM_dataB_InBUS[0]~input_o ))
+
+	.dataa(\BB_SYSTEM_dataA_InBUS[0]~input_o ),
+	.datab(\BB_SYSTEM_dataB_InBUS[0]~input_o ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(),
+	.cout(\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~1_cout ));
+// synopsys translate_off
+defparam \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~1 .lut_mask = 16'h0044;
+defparam \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X47_Y10_N14
+cycloneive_lcell_comb \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~3 (
+// Equation(s):
+// \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~3_cout  = CARRY((\BB_SYSTEM_dataB_InBUS[1]~input_o  & (\BB_SYSTEM_dataA_InBUS[1]~input_o  & !\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~1_cout )) # (!\BB_SYSTEM_dataB_InBUS[1]~input_o  & 
+// ((\BB_SYSTEM_dataA_InBUS[1]~input_o ) # (!\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~1_cout ))))
+
+	.dataa(\BB_SYSTEM_dataB_InBUS[1]~input_o ),
+	.datab(\BB_SYSTEM_dataA_InBUS[1]~input_o ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~1_cout ),
+	.combout(),
+	.cout(\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~3_cout ));
+// synopsys translate_off
+defparam \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~3 .lut_mask = 16'h004D;
+defparam \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~3 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X47_Y10_N16
+cycloneive_lcell_comb \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~5 (
+// Equation(s):
+// \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~5_cout  = CARRY((\BB_SYSTEM_dataA_InBUS[2]~input_o  & (\BB_SYSTEM_dataB_InBUS[2]~input_o  & !\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~3_cout )) # (!\BB_SYSTEM_dataA_InBUS[2]~input_o  & 
+// ((\BB_SYSTEM_dataB_InBUS[2]~input_o ) # (!\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~3_cout ))))
+
+	.dataa(\BB_SYSTEM_dataA_InBUS[2]~input_o ),
+	.datab(\BB_SYSTEM_dataB_InBUS[2]~input_o ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~3_cout ),
+	.combout(),
+	.cout(\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~5_cout ));
+// synopsys translate_off
+defparam \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~5 .lut_mask = 16'h004D;
+defparam \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~5 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X47_Y10_N18
+cycloneive_lcell_comb \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~7 (
+// Equation(s):
+// \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~7_cout  = CARRY((\BB_SYSTEM_dataA_InBUS[3]~input_o  & ((!\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~5_cout ) # (!\BB_SYSTEM_dataB_InBUS[3]~input_o ))) # (!\BB_SYSTEM_dataA_InBUS[3]~input_o  & 
+// (!\BB_SYSTEM_dataB_InBUS[3]~input_o  & !\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~5_cout )))
+
+	.dataa(\BB_SYSTEM_dataA_InBUS[3]~input_o ),
+	.datab(\BB_SYSTEM_dataB_InBUS[3]~input_o ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~5_cout ),
+	.combout(),
+	.cout(\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~7_cout ));
+// synopsys translate_off
+defparam \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~7 .lut_mask = 16'h002B;
+defparam \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~7 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X47_Y10_N20
+cycloneive_lcell_comb \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~9 (
+// Equation(s):
+// \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~9_cout  = CARRY((\BB_SYSTEM_dataB_InBUS[4]~input_o  & ((!\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~7_cout ) # (!\BB_SYSTEM_dataA_InBUS[4]~input_o ))) # (!\BB_SYSTEM_dataB_InBUS[4]~input_o  & 
+// (!\BB_SYSTEM_dataA_InBUS[4]~input_o  & !\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~7_cout )))
+
+	.dataa(\BB_SYSTEM_dataB_InBUS[4]~input_o ),
+	.datab(\BB_SYSTEM_dataA_InBUS[4]~input_o ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~7_cout ),
+	.combout(),
+	.cout(\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~9_cout ));
+// synopsys translate_off
+defparam \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~9 .lut_mask = 16'h002B;
+defparam \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~9 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X47_Y10_N22
+cycloneive_lcell_comb \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~11 (
+// Equation(s):
+// \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~11_cout  = CARRY((\BB_SYSTEM_dataA_InBUS[5]~input_o  & ((!\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~9_cout ) # (!\BB_SYSTEM_dataB_InBUS[5]~input_o ))) # (!\BB_SYSTEM_dataA_InBUS[5]~input_o  & 
+// (!\BB_SYSTEM_dataB_InBUS[5]~input_o  & !\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~9_cout )))
+
+	.dataa(\BB_SYSTEM_dataA_InBUS[5]~input_o ),
+	.datab(\BB_SYSTEM_dataB_InBUS[5]~input_o ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~9_cout ),
+	.combout(),
+	.cout(\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~11_cout ));
+// synopsys translate_off
+defparam \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~11 .lut_mask = 16'h002B;
+defparam \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~11 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X47_Y10_N24
+cycloneive_lcell_comb \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~13 (
+// Equation(s):
+// \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~13_cout  = CARRY((\BB_SYSTEM_dataB_InBUS[6]~input_o  & ((!\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~11_cout ) # (!\BB_SYSTEM_dataA_InBUS[6]~input_o ))) # (!\BB_SYSTEM_dataB_InBUS[6]~input_o  & 
+// (!\BB_SYSTEM_dataA_InBUS[6]~input_o  & !\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~11_cout )))
+
+	.dataa(\BB_SYSTEM_dataB_InBUS[6]~input_o ),
+	.datab(\BB_SYSTEM_dataA_InBUS[6]~input_o ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~11_cout ),
+	.combout(),
+	.cout(\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~13_cout ));
+// synopsys translate_off
+defparam \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~13 .lut_mask = 16'h002B;
+defparam \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~13 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X47_Y10_N26
+cycloneive_lcell_comb \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~14 (
+// Equation(s):
+// \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~14_combout  = (\BB_SYSTEM_dataB_InBUS[7]~input_o  & ((\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~13_cout ) # (!\BB_SYSTEM_dataA_InBUS[7]~input_o ))) # (!\BB_SYSTEM_dataB_InBUS[7]~input_o  & 
+// (!\BB_SYSTEM_dataA_InBUS[7]~input_o  & \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~13_cout ))
+
+	.dataa(\BB_SYSTEM_dataB_InBUS[7]~input_o ),
+	.datab(\BB_SYSTEM_dataA_InBUS[7]~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~13_cout ),
+	.combout(\CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~14_combout ),
+	.cout());
+// synopsys translate_off
+defparam \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~14 .lut_mask = 16'hB2B2;
+defparam \CC_COMPARATOR_u0|CC_GREATERTHAN_u0|LessThan0~14 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X47_Y10_N10
+cycloneive_lcell_comb \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~1 (
+// Equation(s):
+// \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~1_combout  = (\BB_SYSTEM_dataA_InBUS[3]~input_o  & (\BB_SYSTEM_dataB_InBUS[3]~input_o  & (\BB_SYSTEM_dataA_InBUS[2]~input_o  $ (!\BB_SYSTEM_dataB_InBUS[2]~input_o )))) # (!\BB_SYSTEM_dataA_InBUS[3]~input_o  & 
+// (!\BB_SYSTEM_dataB_InBUS[3]~input_o  & (\BB_SYSTEM_dataA_InBUS[2]~input_o  $ (!\BB_SYSTEM_dataB_InBUS[2]~input_o ))))
+
+	.dataa(\BB_SYSTEM_dataA_InBUS[3]~input_o ),
+	.datab(\BB_SYSTEM_dataB_InBUS[3]~input_o ),
+	.datac(\BB_SYSTEM_dataA_InBUS[2]~input_o ),
+	.datad(\BB_SYSTEM_dataB_InBUS[2]~input_o ),
+	.cin(gnd),
+	.combout(\CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~1 .lut_mask = 16'h9009;
+defparam \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X47_Y10_N28
+cycloneive_lcell_comb \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~2 (
+// Equation(s):
+// \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~2_combout  = (\BB_SYSTEM_dataA_InBUS[5]~input_o  & (\BB_SYSTEM_dataB_InBUS[5]~input_o  & (\BB_SYSTEM_dataA_InBUS[4]~input_o  $ (!\BB_SYSTEM_dataB_InBUS[4]~input_o )))) # (!\BB_SYSTEM_dataA_InBUS[5]~input_o  & 
+// (!\BB_SYSTEM_dataB_InBUS[5]~input_o  & (\BB_SYSTEM_dataA_InBUS[4]~input_o  $ (!\BB_SYSTEM_dataB_InBUS[4]~input_o ))))
+
+	.dataa(\BB_SYSTEM_dataA_InBUS[5]~input_o ),
+	.datab(\BB_SYSTEM_dataA_InBUS[4]~input_o ),
+	.datac(\BB_SYSTEM_dataB_InBUS[5]~input_o ),
+	.datad(\BB_SYSTEM_dataB_InBUS[4]~input_o ),
+	.cin(gnd),
+	.combout(\CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~2 .lut_mask = 16'h8421;
+defparam \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X47_Y10_N8
+cycloneive_lcell_comb \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~0 (
+// Equation(s):
+// \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~0_combout  = (\BB_SYSTEM_dataB_InBUS[1]~input_o  & (\BB_SYSTEM_dataA_InBUS[1]~input_o  & (\BB_SYSTEM_dataB_InBUS[0]~input_o  $ (!\BB_SYSTEM_dataA_InBUS[0]~input_o )))) # (!\BB_SYSTEM_dataB_InBUS[1]~input_o  & 
+// (!\BB_SYSTEM_dataA_InBUS[1]~input_o  & (\BB_SYSTEM_dataB_InBUS[0]~input_o  $ (!\BB_SYSTEM_dataA_InBUS[0]~input_o ))))
+
+	.dataa(\BB_SYSTEM_dataB_InBUS[1]~input_o ),
+	.datab(\BB_SYSTEM_dataA_InBUS[1]~input_o ),
+	.datac(\BB_SYSTEM_dataB_InBUS[0]~input_o ),
+	.datad(\BB_SYSTEM_dataA_InBUS[0]~input_o ),
+	.cin(gnd),
+	.combout(\CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~0 .lut_mask = 16'h9009;
+defparam \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X47_Y10_N6
+cycloneive_lcell_comb \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~3 (
+// Equation(s):
+// \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~3_combout  = (\BB_SYSTEM_dataA_InBUS[6]~input_o  & (\BB_SYSTEM_dataB_InBUS[6]~input_o  & (\BB_SYSTEM_dataA_InBUS[7]~input_o  $ (!\BB_SYSTEM_dataB_InBUS[7]~input_o )))) # (!\BB_SYSTEM_dataA_InBUS[6]~input_o  & 
+// (!\BB_SYSTEM_dataB_InBUS[6]~input_o  & (\BB_SYSTEM_dataA_InBUS[7]~input_o  $ (!\BB_SYSTEM_dataB_InBUS[7]~input_o ))))
+
+	.dataa(\BB_SYSTEM_dataA_InBUS[6]~input_o ),
+	.datab(\BB_SYSTEM_dataA_InBUS[7]~input_o ),
+	.datac(\BB_SYSTEM_dataB_InBUS[7]~input_o ),
+	.datad(\BB_SYSTEM_dataB_InBUS[6]~input_o ),
+	.cin(gnd),
+	.combout(\CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~3 .lut_mask = 16'h8241;
+defparam \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X47_Y10_N0
+cycloneive_lcell_comb \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~4 (
+// Equation(s):
+// \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~4_combout  = (\CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~1_combout  & (\CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~2_combout  & (\CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~0_combout  & \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~3_combout )))
+
+	.dataa(\CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~1_combout ),
+	.datab(\CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~2_combout ),
+	.datac(\CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~0_combout ),
+	.datad(\CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~3_combout ),
+	.cin(gnd),
+	.combout(\CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~4_combout ),
+	.cout());
+// synopsys translate_off
+defparam \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~4 .lut_mask = 16'h8000;
+defparam \CC_COMPARATOR_u0|CC_EQUAL_u0|Equal0~4 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+assign BB_SYSTEM_greaterthan_Out = \BB_SYSTEM_greaterthan_Out~output_o ;
+
+assign BB_SYSTEM_lessthan_Out = \BB_SYSTEM_lessthan_Out~output_o ;
+
+assign BB_SYSTEM_equal_Out = \BB_SYSTEM_equal_Out~output_o ;
+
+endmodule
+
+module hard_block (
+
+	devpor,
+	devclrn,
+	devoe);
+
+// Design Ports Information
+// ~ALTERA_ASDO_DATA1~	=>  Location: PIN_C1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_FLASH_nCE_nCSO~	=>  Location: PIN_D2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DCLK~	=>  Location: PIN_H1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DATA0~	=>  Location: PIN_H2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_nCEO~	=>  Location: PIN_F16,	 I/O Standard: 2.5 V,	 Current Strength: 8mA
+
+input 	devpor;
+input 	devclrn;
+input 	devoe;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+wire \~ALTERA_ASDO_DATA1~~padout ;
+wire \~ALTERA_FLASH_nCE_nCSO~~padout ;
+wire \~ALTERA_DATA0~~padout ;
+wire \~ALTERA_ASDO_DATA1~~ibuf_o ;
+wire \~ALTERA_FLASH_nCE_nCSO~~ibuf_o ;
+wire \~ALTERA_DATA0~~ibuf_o ;
+
+
+endmodule

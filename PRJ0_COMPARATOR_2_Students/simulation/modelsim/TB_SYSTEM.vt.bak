@@ -1,0 +1,85 @@
+/*######################################################################
+//#	G0B1T: HDL EXAMPLES. 2018.
+//######################################################################
+//# Copyright (C) 2018. F.E.Segura-Quijano (FES) fsegura@uniandes.edu.co
+//# 
+//# This program is free software: you can redistribute it and/or modify
+//# it under the terms of the GNU General Public License as published by
+//# the Free Software Foundation, version 3 of the License.
+//#
+//# This program is distributed in the hope that it will be useful,
+//# but WITHOUT ANY WARRANTY; without even the implied warranty of
+//# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//# GNU General Public License for more details.
+//#
+//# You should have received a copy of the GNU General Public License
+//# along with this program.  If not, see <http://www.gnu.org/licenses/>
+//####################################################################*/
+`timescale 1 ns/ 1 ns
+module TB_SYSTEM();
+// constants                                           
+// ============================================
+// Parameter ( may differ for physical synthesis)
+// ============================================
+	// general purpose registers
+	reg eachvec;
+	parameter NUMBER_DATAWIDTH = 8;
+	integer ii=0;
+
+	// test vector input registers
+// ============================================
+// INTERNAL WIRE AND REG DECLARATIONS
+// ============================================
+	// wires (OUTPUTS)
+	wire TB_SYSTEM_greaterthan_Out; 
+	wire TB_SYSTEM_lessthan_Out; 
+	wire TB_SYSTEM_equal_Out; 
+	// reg (INPUTS)
+	reg [NUMBER_DATAWIDTH-1:0] TB_SYSTEM_dataA_InBUS;
+	reg [NUMBER_DATAWIDTH-1:0] TB_SYSTEM_dataB_InBUS;
+	
+	// assign statements (if any)                          
+	BB_SYSTEM BB_SYSTEM_u0 (
+	// port map - connection between master ports and signals/registers   
+		.BB_SYSTEM_greaterthan_Out(TB_SYSTEM_greaterthan_Out),
+		.BB_SYSTEM_lessthan_Out(TB_SYSTEM_lessthan_Out),
+		.BB_SYSTEM_equal_Out(TB_SYSTEM_equal_Out),
+		.BB_SYSTEM_dataA_InBUS(TB_SYSTEM_dataA_InBUS),
+		.BB_SYSTEM_dataB_InBUS(TB_SYSTEM_dataB_InBUS)
+	);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin   
+	#10000 $monitor( "%1d:", ii, "Tiempo: %2d." , $time, "TB_SYSTEM_dataA_InBUS = %b", TB_SYSTEM_dataA_InBUS, "  |  TB_SYSTEM_dataB_InBUS= ", TB_SYSTEM_dataB_InBUS, "  |  TB_SYSTEM_equal_Out = ", TB_SYSTEM_equal_Out);            
+
+	#0 		TB_SYSTEM_dataA_InBUS <= 10; TB_SYSTEM_dataB_InBUS <= 15; // CHECK ??
+	#20000	TB_SYSTEM_dataA_InBUS <= 20; TB_SYSTEM_dataB_InBUS <= 20; // CHECK ??
+	#20000	TB_SYSTEM_dataA_InBUS <= -30; TB_SYSTEM_dataB_InBUS <= 60; // CHECK ??
+	#20000	TB_SYSTEM_dataA_InBUS <= 40; TB_SYSTEM_dataB_InBUS <= 70; // CHECK ??
+	#20000	TB_SYSTEM_dataA_InBUS <= 60; TB_SYSTEM_dataB_InBUS <= 61; // CHECK ??
+	#20000	TB_SYSTEM_dataA_InBUS <= 128; TB_SYSTEM_dataB_InBUS <= 128; // CHECK ??
+	#20000	TB_SYSTEM_dataA_InBUS <= 32; TB_SYSTEM_dataB_InBUS <= 32; // CHECK ??
+	for (ii=0; ii<10; ii=ii+1)
+		begin
+			TB_SYSTEM_dataA_InBUS <= 5;
+			TB_SYSTEM_dataB_InBUS <= ii;
+			#20000;
+	end
+@eachvec;
+$finish;                                              
+// --> end                                             
+end                                                    
+endmodule
+
